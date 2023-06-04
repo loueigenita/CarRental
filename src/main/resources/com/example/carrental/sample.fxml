@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.CarRentalController">
+   <children>
+      <GridPane layoutX="7.0" prefHeight="432.0" prefWidth="786.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="551.0" minWidth="10.0" prefWidth="551.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="0.0" prefWidth="72.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="152.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="0.0" prefWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="118.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="118.0" minHeight="9.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="86.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane GridPane.rowIndex="1">
+               <children>
+                   <TableView fx:id="tableView" layoutX="4.0" layoutY="342.0" prefHeight="292.0" prefWidth="534.0">
+                       <columns>
+                           <TableColumn text="Name">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="name" />
+                               </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn text="Address">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="address" />
+                               </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn text="Car Type">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="carType" />
+                               </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn text="Amount Paid">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="amountPaid" />
+                               </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn prefWidth="102.0" text="Rent Date">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="rentDate" />
+                               </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn prefWidth="111.0" text="Return Date">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="returnDate" />
+                               </cellValueFactory>
+                           </TableColumn>
+                       </columns>
+                   </TableView>
+
+
+                   <Label layoutX="174.0" layoutY="282.0" />
+                  <Label layoutX="358.0" layoutY="274.0" />
+                  <Label layoutX="293.0" layoutY="275.0" prefHeight="49.0" prefWidth="245.0" text="CAR RENTAL" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label text="Name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Car Type" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Amount Paid" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Rent Date" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Return Date" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="nameField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="addressField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ComboBox fx:id="carTypeComboBox" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="amountPaidField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <DatePicker fx:id="rentDatePicker" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <DatePicker fx:id="returnDatePicker" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+             <Button mnemonicParsing="false" onAction="#addCustomer" prefHeight="25.0" prefWidth="157.0" text="Add" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+             <Button mnemonicParsing="false" onAction="#updateCustomer" prefHeight="25.0" prefWidth="158.0" text="Update" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+             <Button mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="25.0" prefWidth="170.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
